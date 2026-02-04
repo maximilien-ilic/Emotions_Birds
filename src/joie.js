@@ -6,42 +6,54 @@ canvas.width = size;
 canvas.height = size;
 
 
-function drawSquare(x,y,size){
-  ctx.fillStyle = "red";
+function drawSquare(x,y,size,color){
+  ctx.fillStyle = color;
   ctx.fillRect(x,y,size,size);
-
 }
-let xPos = 0;
+
+
+let taille = 0;
+let espacement = 0;
 let x = 0;
 let direction = 1;
-const speed = 2;
+
+const speed = 3;
 const squareSize = 100;
 
 
-
-function loop(num) {
+function loop(num,color1,color2) {
+    taille = size / (num * 2);
+    espacement = taille * 2;
     ctx.clearRect(0, 0, size, size);
-    ctx.beginPath();
+    left_square(num,color1);
+    right_square(num,color2);
+    requestAnimationFrame(() => loop(num,color1,color2));
+}
 
-    drawSquare(x, num, 30);
+
+function right_square(num,color) {
+    let b = 0;
+    for (let i = 0; i < num; i++) {
+            b = i * espacement + taille ;
+            drawSquare(size - x - taille, b, taille,color);
+    }
+}
+
+
+function left_square(num,color) {
+    let a = 0;
+    for (let i = 0; i < num; i++) {
+            a = i * espacement ;
+            drawSquare(x, a, taille,color);
+    }
 
     x += speed * direction;
 
-    if (x + squareSize >= size) {
+    if (x + taille >= size) {
         direction = -1;
     } else if (x <= 0) {
         direction = 1;
     }
-
-    requestAnimationFrame(() => loop(num));
 }
 
-function satisfaction(num) {
-    let a = 0;
-    for (let i = 0; i < num; i++) {
-            a = i * 10 ;
-            loop(a);
-    }
-}
-
-satisfaction(10);
+loop(2, "red","blue");
