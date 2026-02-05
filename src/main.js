@@ -6,9 +6,9 @@ greenBird1.addEventListener("click", () => {
     greenBird1.addEventListener('transitionend', () => {
     greenBird1.classList.add('disp');
     window.scrollTo({
-      left: window.innerWidth,
-      top: 0,
-      behavior: 'smooth'
-    });
+  left: window.scrollX + window.innerWidth,
+  top: 0,
+  behavior: 'smooth'
+});
   }, { once: true });
 });
