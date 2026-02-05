@@ -61,17 +61,17 @@ let speed = 3;
 const squareSize = 100;
 let currentSpeed = 3;
 
-function loop(num,color1,color2,color3,color4) {
+function loop(num,color, vitesse) {
     taille = size / (num * 2);
     espacement = taille * 2;
-    currentSpeed = 2 + Math.abs(Math.sin(frameCount * 0.02)) * 4;
+    currentSpeed = 2 + Math.abs(Math.sin(frameCount * 0.01)) * 4;
     frameCount++;
     ctx.clearRect(0, 0, size, size);
-    left_square(num,color1);
-    right_square(num,color2);
-    top_left(num,color3);
-    bottom_right(num,color4);
-    requestAnimationFrame(() => loop(num,color1,color2,color3,color4));
+    left_square(num,color);
+    right_square(num,color);
+    top_left(num,color);
+    bottom_right(num,color);
+    requestAnimationFrame(() => loop(num,color));
 }
 
 
@@ -119,4 +119,4 @@ function bottom_right(num,color) {
 
 }
 
-loop(5, "blue","blue","blue","blue");
+loop(5, "purple", 2);
