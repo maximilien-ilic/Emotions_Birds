@@ -6,9 +6,24 @@ canvas.width = size;
 canvas.height = size;
 
 
+
 function drawSquare(x,y,size,color){
+  let opacity = 0;
   ctx.fillStyle = color;
-  ctx.fillRect(x,y,size,size);
+  }
+  if(direction == 1){
+    for (let i = 0; i < 5; i++){
+        opacity += 0.2;
+        ctx.globalAlpha = opacity;
+        ctx.fillRect(x - (5-i) * espacement ,y,size,size);
+        }
+    }
+  if(direction == -1){
+    for (let i = 0; i < 5; i++){
+        opacity += 0.2;
+        ctx.globalAlpha = opacity;
+        ctx.fillRect(x + (5-i) * espacement ,y,size,size);
+  }  
 }
 
 
@@ -21,13 +36,15 @@ const speed = 3;
 const squareSize = 100;
 
 
-function loop(num,color1,color2) {
+function loop(num,color1,color2,color3,color4) {
     taille = size / (num * 2);
     espacement = taille * 2;
     ctx.clearRect(0, 0, size, size);
     left_square(num,color1);
     right_square(num,color2);
-    requestAnimationFrame(() => loop(num,color1,color2));
+    top_left(num,color3);
+    bottom_right(num,color4);
+    requestAnimationFrame(() => loop(num,color1,color2,color3,color4));
 }
 
 
@@ -56,4 +73,23 @@ function left_square(num,color) {
     }
 }
 
-loop(2, "red","blue");
+
+function top_left(num,color) {
+    let c = 0;
+    for (let i = 0; i < num; i++) {
+            c = i * espacement ;
+            drawSquare(c, x, taille,color);
+    }
+
+}
+
+function bottom_right(num,color) {
+    let d = 0;
+    for (let i = 0; i < num; i++) {
+            d = i * espacement + taille ;
+            drawSquare(d, size - x - taille, taille,color);
+    }
+
+}
+
+loop(10, "blue","blue","blue","blue");
