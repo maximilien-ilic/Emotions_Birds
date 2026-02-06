@@ -168,6 +168,7 @@ justify-content: end;
 padding-right: 5%;
 
 }
+
 #redBird1{
   transform: rotateY(180deg);
   position: absolute;
@@ -191,7 +192,26 @@ display: flex;
 width: 100%; 
 position: relative;
 align-items: center;
+justify-content: center;
+}
+.sad-text {
+  color: white;
+  font-size: 50px;
+  animation: sink 10s ease-in-out infinite ;
+  width: 50%;
+  
+}
 
+@keyframes sink {
+  0% { 
+    transform: translateY(0); 
+  }
+  50%{ 
+    transform: translateY(80px); 
+  }
+  100%{
+    transform: translateY(0); 
+  }
 }
 
 .carre3_part3{
