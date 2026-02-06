@@ -103,13 +103,16 @@ flex: 0 0 100vw;
   display: flex;
 
 flex: 0 0 100vw; 
-  background:linear-gradient(to left,red,blue);
+  /* background:linear-gradient(to left,red,blue); */
 height: 100%;
 }
 .carre2_part1{
 display: flex;
 flex-direction: column;
 justify-content: end;
+padding-right: 5%;
+
+
 }
 #greenBird1{
   position: absolute;
@@ -119,33 +122,51 @@ justify-content: end;
 }
 .carre2_part2{
 display: flex;
-
+background-color: #F94144;
 width: 100%; 
 }
 .carre2_part3{
 display: flex;
 flex-direction: column;
 justify-content: end;
+padding-left: 5%;
+
 }
 #blueBird1{
   position: absolute;
   margin-top: -1%;
   margin-left: -6%;
   z-index: 1;
+  
 }
 /* fin carre 2 */
 /* carre 3 */
 #carre3{
-flex: 0 0 100vw;  
-display: flex;
-justify-content: center;
-  background:linear-gradient(to left,rgb(198, 253, 70),blue);
+  flex: 0 0 100vw;  
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
 }
+#carre3::before {
+  content: "";
+  position: absolute;
+  inset: 0;
 
+  background-image: url(fond_triste.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  filter: brightness(50%);
+  z-index: -1;
+}
 .carre3_part1{
 display: flex;
 flex-direction: column;
 justify-content: end;
+padding-right: 5%;
+
 }
 #redBird1{
   transform: rotateY(180deg);
@@ -155,15 +176,30 @@ justify-content: end;
   z-index: 1;
   width: 8%;
 }
+
+.raindrop{
+  position: absolute;
+  width: 5px;
+  height: 15px;
+  background-color: white;
+  animation: tomber linear infinite;
+  top: -15px;
+}
 .carre3_part2{
 display: flex;
 
 width: 100%; 
+position: relative;
+align-items: center;
+
 }
+
 .carre3_part3{
 display: flex;
 flex-direction: column;
 justify-content: end;
+padding-left: 5%;
+
 }
 #greenBird2{
   transform: rotateY(180deg);
@@ -185,6 +221,8 @@ justify-content: center;
 display: flex;
 flex-direction: column;
 justify-content: end;
+padding-right: 5%;
+
 }
 #blueBird2{
   transform: rotateY(180deg);
@@ -196,13 +234,15 @@ justify-content: end;
 }
 .carre4_part2{
 display: flex;
-
+background-color: #90BE6D;
 width: 100%; 
 }
 .carre4_part3{
 display: flex;
 flex-direction: column;
 justify-content: end;
+padding-left: 5%;
+
 }
 #redBird2{
   position: absolute;
@@ -218,11 +258,11 @@ justify-content: end;
     transform: translate(0px, 0px);
   }
   50%{
- transform: translate(-150px, 7vh);
+ transform: translate(-150px, 7svh);
  
   }
  100%{
-  transform: translate(200px, -7vh);
+  transform: translate(200px, -7svh);
   
  }
 
@@ -233,10 +273,10 @@ justify-content: end;
     transform: translate(0px, 0px);
   }
   50%{
- transform: translate(150px, 7vh);
+ transform: translate(150px, 7svh);
   }
  100%{
-  transform: translate(-200px, -7vh);
+  transform: translate(-200px, -7svh);
  }
 
 }
@@ -246,10 +286,10 @@ justify-content: end;
     transform: rotateY(180deg) translate(0px, 0px);
   }
   50%{
-    transform: rotateY(180deg) translate(150px, 7vh);
+    transform: rotateY(180deg) translate(150px, 7svh);
   }
   100%{
-    transform: rotateY(180deg) translate(-200px, -7vh);
+    transform: rotateY(180deg) translate(-200px, -7svh);
   }
 
 }
@@ -259,10 +299,10 @@ justify-content: end;
     transform: rotateY(180deg) translate(0px, 0px);
   }
   50%{
-    transform: rotateY(180deg) translate(-150px, 7vh);
+    transform: rotateY(180deg) translate(-150px, 7svh);
   }
   100%{
-    transform: rotateY(180deg) translate(200px, -7vh);
+    transform: rotateY(180deg) translate(200px, -7svh);
   }
 
 }
@@ -292,4 +332,13 @@ justify-content: end;
     transform: rotateZ(0deg);
   }
 
+}
+
+@keyframes tomber {
+  0%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(100svh);
+  }
 }

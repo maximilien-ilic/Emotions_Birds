@@ -25,7 +25,7 @@ blueBird1.addEventListener("click", () => {
   },);
   
   setTimeout(() => {
-    branches1.classList.remove('lancer1');
+    branches2.classList.remove('lancer2');
   blueBird1.classList.remove('disp');
 }, 4000);
 });
@@ -44,6 +44,7 @@ greenBird1.addEventListener("click", () => {
   }, );
   
   setTimeout(() => {
+    branches1.classList.remove('lancer1');
 greenBird1.classList.remove('disp');
 }, 4000);
 });
@@ -67,6 +68,7 @@ greenBird2.addEventListener("click", () => {
   }, );
   
   setTimeout(() => {
+    branches4.classList.remove('lancer2');
 greenBird2.classList.remove('disp');
 }, 4000);
 });
@@ -85,6 +87,7 @@ redBird1.addEventListener("click", () => {
   }, );
   
   setTimeout(() => {
+    branches3.classList.remove('lancer1');
     redBird1.classList.remove('disp');
 }, 4000);
 });
@@ -107,6 +110,7 @@ blueBird2.addEventListener("click", () => {
   }, );
   
   setTimeout(() => {
+    branches5.classList.remove('lancer1');
   blueBird2.classList.remove('disp');
 }, 4000);
 });
@@ -126,10 +130,26 @@ redBird2.addEventListener("click", () => {
   }, );
   
   setTimeout(() => {
+    branches6.classList.remove('lancer2');
 redBird2.classList.remove('disp');
 }, 4000);
 });
 
 
+// pluie
+const rainContainer = document.querySelector('#carre3');
+function createRaindrop(){
 
+const raindrop = document.createElement('div');
+raindrop.classList.add('raindrop');
+const containerWidth = rainContainer.clientWidth;
+raindrop.style.left = Math.random() * containerWidth +  'px';
+const duration = Math.random() * 1 + 0.5;
+raindrop.style.animationDuration = duration + 's';
+rainContainer.appendChild(raindrop);
+setTimeout(() => {
+  raindrop.remove();
+}, duration * 5000);
 
+}
+setInterval(createRaindrop, 50)
