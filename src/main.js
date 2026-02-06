@@ -5,12 +5,19 @@ const branches3 = document.querySelector(".branch3");
 const branches4 = document.querySelector(".branch4");
 const branches5 = document.querySelector(".branch5");
 const branches6 = document.querySelector(".branch6");
+const triste = document.getElementById('triste');
+const colere = document.getElementById('colere');
+const principale = document.getElementById('principale');
+const joie = document.getElementById('joie');
 
 // first 
 const blueBird1 = document.querySelector('#blueBird1');
 const greenBird1 = document.querySelector('#greenBird1');
 blueBird1.addEventListener("click", () => {
-  
+    triste.play();
+    colere.pause();
+    principale.pause();
+    joie.pause();
     blueBird1.classList.add('transition');
     branches2.classList.add('lancer2');
     blueBird1.addEventListener('animationend', () => {
@@ -31,6 +38,10 @@ blueBird1.addEventListener("click", () => {
 });
 
 greenBird1.addEventListener("click", () => {
+    triste.pause();
+    colere.pause();
+    principale.pause();
+    joie.play();
   branches1.classList.add('lancer1');
     greenBird1.classList.add('transition2');
     greenBird1.addEventListener('animationend', () => {
@@ -55,6 +66,10 @@ greenBird1.classList.remove('disp');
 const redBird1 = document.querySelector('#redBird1');
 const greenBird2 = document.querySelector('#greenBird2');
 greenBird2.addEventListener("click", () => {
+      triste.pause();
+    colere.pause();
+    principale.pause();
+    joie.play();
   branches4.classList.add('lancer2');
     greenBird2.classList.add('transition3');
     greenBird2.addEventListener('animationend', () => {
@@ -74,6 +89,10 @@ greenBird2.classList.remove('disp');
 });
 
 redBird1.addEventListener("click", () => {
+      triste.pause();
+    colere.play();
+    principale.pause();
+    joie.pause();
   branches3.classList.add('lancer1');
     redBird1.classList.add('transition4');
     redBird1.addEventListener('animationend', () => {
@@ -97,6 +116,10 @@ redBird1.addEventListener("click", () => {
 const blueBird2 = document.querySelector('#blueBird2');
 const redBird2 = document.querySelector('#redBird2');
 blueBird2.addEventListener("click", () => {
+    triste.play();
+    colere.pause();
+    principale.pause();
+    joie.pause();
   branches5.classList.add('lancer1');
     blueBird2.classList.add('transition4');
     blueBird2.addEventListener('animationend', () => {
@@ -116,6 +139,10 @@ blueBird2.addEventListener("click", () => {
 });
 
 redBird2.addEventListener("click", () => {
+      triste.pause();
+    colere.play();
+    principale.pause();
+    joie.pause();
       branches6.classList.add('lancer2');
     redBird2.classList.add('transition');
 
