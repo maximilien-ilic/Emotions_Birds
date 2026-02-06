@@ -119,4 +119,4 @@ function bottom_right(num,color) {
 
 }
 
-loop(5, "purple", 2);
+loop(18, "red", 5);
