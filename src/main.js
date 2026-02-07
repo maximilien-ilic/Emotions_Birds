@@ -14,6 +14,7 @@ const joie = document.getElementById('joie');
 const blueBird1 = document.querySelector('#blueBird1');
 const greenBird1 = document.querySelector('#greenBird1');
 blueBird1.addEventListener("click", () => {
+  blueBird1.classList.remove('wait');
     triste.play();
     colere.pause();
     principale.pause();
@@ -34,10 +35,12 @@ blueBird1.addEventListener("click", () => {
   setTimeout(() => {
     branches2.classList.remove('lancer2');
   blueBird1.classList.remove('disp');
+  blueBird1.classList.add('wait');
 }, 4000);
 });
 
 greenBird1.addEventListener("click", () => {
+  greenBird1.classList.remove('wait');
     triste.pause();
     colere.pause();
     principale.pause();
@@ -57,6 +60,7 @@ greenBird1.addEventListener("click", () => {
   setTimeout(() => {
     branches1.classList.remove('lancer1');
 greenBird1.classList.remove('disp');
+ greenBird1.classList.add('wait');
 }, 4000);
 });
 
@@ -66,6 +70,7 @@ greenBird1.classList.remove('disp');
 const redBird1 = document.querySelector('#redBird1');
 const greenBird2 = document.querySelector('#greenBird2');
 greenBird2.addEventListener("click", () => {
+  greenBird2.classList.remove('wait2');
       triste.pause();
     colere.pause();
     principale.pause();
@@ -85,10 +90,12 @@ greenBird2.addEventListener("click", () => {
   setTimeout(() => {
     branches4.classList.remove('lancer2');
 greenBird2.classList.remove('disp');
+greenBird2.classList.add('wait2');
 }, 4000);
 });
 
 redBird1.addEventListener("click", () => {
+  redBird1.classList.remove('wait2');
       triste.pause();
     colere.play();
     principale.pause();
@@ -108,6 +115,7 @@ redBird1.addEventListener("click", () => {
   setTimeout(() => {
     branches3.classList.remove('lancer1');
     redBird1.classList.remove('disp');
+     redBird1.classList.add('wait2');
 }, 4000);
 });
 
@@ -116,6 +124,7 @@ redBird1.addEventListener("click", () => {
 const blueBird2 = document.querySelector('#blueBird2');
 const redBird2 = document.querySelector('#redBird2');
 blueBird2.addEventListener("click", () => {
+  blueBird2.classList.remove('wait2');
     triste.play();
     colere.pause();
     principale.pause();
@@ -135,10 +144,12 @@ blueBird2.addEventListener("click", () => {
   setTimeout(() => {
     branches5.classList.remove('lancer1');
   blueBird2.classList.remove('disp');
+  blueBird2.classList.add('wait2');
 }, 4000);
 });
 
 redBird2.addEventListener("click", () => {
+  redBird2.classList.remove('wait');
       triste.pause();
     colere.play();
     principale.pause();
@@ -159,6 +170,7 @@ redBird2.addEventListener("click", () => {
   setTimeout(() => {
     branches6.classList.remove('lancer2');
 redBird2.classList.remove('disp');
+redBird2.classList.add('wait');
 }, 4000);
 });
 

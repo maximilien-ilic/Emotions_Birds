@@ -92,19 +92,63 @@ body{
 .lancer2{
   animation: lancer2 2s ease-out;
 }
-
+.wait{
+  animation: wait 2s infinite;
+}
+.wait2{
+  animation: wait2 2s infinite;
+}
 
 .carre1{
-  transition: 3s ease-in-out;
+
 flex: 0 0 100vw;
+  background-image: url(principale.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+.choix{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10%;
+  
+}
+
+#redBird{
+  width: 80%;
+
+}
+.placed {
+  animation: spawn 2s ease-out;
+  position: absolute; 
+
+  right: 80%;
+
+  z-index: 2; 
+
+}
+.dropzone {
+  position: relative; 
+  width: 400px; 
+  height: 200px;
+  margin-left: 40%;
+  margin-top: 15%;
+}
+
+.branch {
+transform-origin: bottom center;
+  z-index: 1;
+  position: relative;
+}
+
+
 /* carre  2 */
 #carre2{
   display: flex;
 
 flex: 0 0 100vw; 
-  /* background:linear-gradient(to left,red,blue); */
 height: 100%;
+
 }
 .carre2_part1{
 display: flex;
@@ -119,6 +163,7 @@ padding-right: 5%;
   margin-top: -1%;
   margin-left: -2%;
   z-index: 1;
+  
 }
 .carre2_part2{
 display: flex;
@@ -362,3 +407,44 @@ padding-left: 5%;
     transform: translateY(100svh);
   }
 }
+
+@keyframes wait {
+  0%{
+    transform: scale(0.9);
+  }
+  50%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0.9);
+  }
+}
+
+
+@keyframes wait2 {
+  0%{
+    transform: scale(0.9)
+    rotateY(180deg);
+  }
+  50%{
+    transform: scale(1)
+    rotateY(180deg);
+  }
+  100%{
+    transform: scale(0.9)
+    rotateY(180deg);
+  }
+}
+
+@keyframes spawn {
+  0%{
+    transform: translate(0px, 0px);
+  }
+  50%{
+ transform: translate(-150px, 7svh);
+  }
+ 100%{
+  transform: translate(1800px, -80svh);
+ }
+}
+
