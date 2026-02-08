@@ -80,3 +80,30 @@ body {
         transform: scale(1);
     }
 }
+
+
+body.zoom-out {
+  animation: zoomOut 0.8s forwards;
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+
+.button.click {
+  animation: lancement 0.5s;
+}
+
+@keyframes lancement {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(0); opacity: 0; }
+}
