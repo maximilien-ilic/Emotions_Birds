@@ -18,15 +18,14 @@ function dropHandler(ev) {
   setTimeout(() => {
   switch (element.id) {
     case "blueBird":
-      console.log("Action pour blueBird !");
+
       window.scrollTo({
         left: window.scrollX + window.innerWidth * 2, 
         top: 0,
         behavior: 'smooth'
       });
       break;
-    case "redBird":
-      console.log("Action pour redBird !");
+    case "redBird":  
       window.scrollTo({
         left: window.scrollX + window.innerWidth * 1, 
         top: 0,
@@ -34,7 +33,7 @@ function dropHandler(ev) {
       });
       break;
     case "greenBird":
-      console.log("Action pour greenBird !");
+
       window.scrollTo({
         left: window.scrollX + window.innerWidth* 3, 
         top: 0,
