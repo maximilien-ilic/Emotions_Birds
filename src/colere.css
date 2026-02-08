@@ -1,4 +1,10 @@
 
+.carre2{
+    background-image: url("./Colere.jpg");
+
+}
+
+
 @font-face {
   font-family: 'AngryBirds';
   src: url('./angrybirds-regular.ttf') format('truetype');
@@ -18,8 +24,26 @@
   display: flex;
   justify-content: center;
   align-items: center; 
-  background: rgba(255, 0, 0, 0.1);
+  color: white;
+  text-shadow: 
+    5px 5px 0 #8B0000,
+    -2px -2px 0 #8B0000;
   flex: 0 0 auto; 
+    transition: 1.5s;
+  animation: title 2.5s infinite;
+}
+@keyframes title {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .choixx {
@@ -28,12 +52,12 @@
   margin: 0;
 }
 
-.flex {
+.flex_colere {
   display: flex;
-  flex: 1; 
+  flex: 1;
+  margin-left: 70px; 
   justify-content: center;
   align-items: center;
-  background: rgba(169, 159, 159, 0.1);
 }
 
 img{

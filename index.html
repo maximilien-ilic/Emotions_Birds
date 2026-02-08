@@ -1,78 +1,118 @@
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style.css" />
-    <link rel="stylesheet" href="./src/joie.css">
-    <link rel="stylesheet" href="./src/colere.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./src/joie.css" />
+    <link rel="stylesheet" href="./src/colere.css" />
+    <link rel="stylesheet" href="./src/intro.css" />
+    <title>Emotions Birds</title>
   </head>
   <body>
     <audio id="triste" src="public/pluie.wav">pluie</audio>
     <audio id="principale" src="public/principale.mp3" autoplay loop></audio>
-    <audio id="colere" src="public/.wav">pluie</audio>
-    <audio id="joie" src="public/.wav">pluie</audio>
+    <audio id="colere" src="public/fire-burning.mp3">colere</audio>
+    <audio id="joie" src="public/Bad Piggies Theme.mp3">joie</audio>
     <div class="carre1">
-
+      <div class="flex" id="intro">
+        <h1 class="title" href="colere.html">EMOTIONS BIRDS</h1>
+        <button class="button" id="button">Commencer l'aventure</button>
+      </div>
       <div class="choix">
-        <button><img draggable="true" ondragstart="dragstartHandler(event)" src="public/blue.png" id="blueBird" class="wait" alt="" ></button>
-      <button><img draggable="true" ondragstart="dragstartHandler(event)" src="public/green.png" id="greenBird" class="wait"alt=""></button>
-      <button><img draggable="true" ondragstart="dragstartHandler(event)"   src="public/red.png" id="redBird" class="wait"alt=""></button>
+        <button>
+          <img
+            draggable="true"
+            ondragstart="dragstartHandler(event)"
+            src="public/blue.png"
+            id="blueBird"
+            class="wait"
+            alt=""
+          />
+        </button>
+        <button>
+          <img
+            draggable="true"
+            ondragstart="dragstartHandler(event)"
+            src="public/green.png"
+            id="greenBird"
+            class="wait"
+            alt=""
+          />
+        </button>
+        <button>
+          <img
+            draggable="true"
+            ondragstart="dragstartHandler(event)"
+            src="public/red.png"
+            id="redBird"
+            class="wait"
+            alt=""
+          />
+        </button>
       </div>
 
-      <div id="drop" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)" class="dropzone">
-  <img src="public/branch.png" alt="" class="branch">
-</div>
+      <div
+        id="drop"
+        ondrop="dropHandler(event)"
+        ondragover="dragoverHandler(event)"
+        class="dropzone"
+      >
+        <img src="public/branch.png" alt="" class="branch" />
+      </div>
     </div>
-    <div id="carre2">
+    <div class="carre2" id="carre2">
       <div class="carre2_part1">
-        <button><img src="public/green.png" alt="" id="greenBird1" class="wait"/></button>
+        <button>
+          <img src="public/green.png" alt="" id="greenBird1" class="wait" />
+        </button>
         <img src="public/branch.png" alt="" class="branch1" />
       </div>
 
       <div class="carre2_part2">
         <div class="container">
-      <div class="Title">
-        <h2 class="choixx">Tu choisis qui ?</h2>
-      </div>
-      <div class="flex">
-        <img src="src/image 43.png" id="cochon" alt="cochon vert" />
-        <img src="src/image 44.png" id="oiseau" alt="oiseau rouge" />
-      </div>
-    </div>
-    <div id="modal" class="opacity modal-overlay">
-      <div class="modal">
-        <div class="modal-header">
-          <h1 class="modal-title">ERREUR</h1>
-          <button id="close" class="modal-close">✕</button>
+          <div class="Title">
+            <h2 class="choixx">Tu choisis qui ?</h2>
+          </div>
+          <div class="flex_colere">
+            <img src="src/image 43.png" id="cochon" alt="cochon vert" />
+            <img src="src/image 44.png" id="oiseau" alt="oiseau rouge" />
+          </div>
         </div>
-        <div id="content" class="modal-content">
-          <h2 class="error-title">Erreur système critique</h2>
-          <p class="error-message">
-            Une erreur inattendue s'est produite et Windows a dû interrompre le
-            processus en cours.
-          </p>
+        <div id="modal" class="opacity modal-overlay">
+          <div class="modal">
+            <div class="modal-header">
+              <h1 class="modal-title">ERREUR</h1>
+              <button id="close" class="modal-close">✕</button>
+            </div>
+            <div id="content" class="modal-content">
+              <h2 class="error-title">Erreur système critique</h2>
+              <p class="error-message">
+                Une erreur inattendue s'est produite et Windows a dû interrompre
+                le processus en cours.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
       </div>
       <div class="carre2_part3">
-        <button><img src="public/blue.png" alt="" id="blueBird1" class="wait"/></button>
+        <button>
+          <img src="public/blue.png" alt="" id="blueBird1" class="wait" />
+        </button>
         <img src="public/branch.png" alt="" class="branch2" />
       </div>
     </div>
 
     <div id="carre3">
       <div class="carre3_part1">
-        <button><img src="public/red.png" alt="" id="redBird1" class="wait2"/></button>
+        <button>
+          <img src="public/red.png" alt="" id="redBird1" class="wait2" />
+        </button>
         <img src="public/branch.png" alt="" class="branch3" />
       </div>
 
       <div class="carre3_part2">
         <h3 class="sad-text">
-
           Lorsque tu perds à Angry Birds… Le silence tombe. Les oiseaux ne
           volent plus. Ils sont là, immobiles, fatigués. Le dernier tir est
           parti trop vite. La tour tient encore. Les cochons ricanent doucement.
@@ -81,34 +121,43 @@
         </h3>
       </div>
       <div class="carre3_part3">
-        <button><img src="public/green.png" alt="" id="greenBird2" class="wait2"/></button>
+        <button>
+          <img src="public/green.png" alt="" id="greenBird2" class="wait2" />
+        </button>
         <img src="public/branch.png" alt="" class="branch4" />
       </div>
     </div>
-    <div id="carre4">
+    <div class="carre4" id="carre4">
       <div class="carre4_part1">
-        <button><img src="public/blue.png" alt="" id="blueBird2" class="wait2"/></button>
+        <button>
+          <img src="public/blue.png" alt="" id="blueBird2" class="wait2" />
+        </button>
         <img src="public/branch.png" alt="" class="branch5" />
       </div>
 
       <div class="carre4_part2">
+        <h1 class="title">SATISFACTION</h1>
+        <div id="app">
+          <canvas id="canvas"></canvas>
+        </div>
         <div class="controls">
-      <button id="moins">-</button>
-      <span id="nombre">18</span>
-      <button id="plus">+</button>
-    </div>
-    <div id="app">
-      <canvas id="canvas"></canvas>
-    </div>
+          <button id="moins">-</button>
+          <span id="nombre">18</span>
+          <button id="plus">+</button>
+        </div>
       </div>
+
       <div class="carre4_part3">
-        <button><img src="public/red.png" alt="" id="redBird2" class="wait"/></button>
+        <button>
+          <img src="public/red.png" alt="" id="redBird2" class="wait" />
+        </button>
         <img src="public/branch.png" alt="" class="branch6" />
       </div>
     </div>
   </body>
+  <script src="./src/intro.js"></script>
   <script src="./src/main.js"></script>
-    <script src="./src/drag.js"></script>
-    <script src="./src/joie.js"></script>
-    <script src="./src/colere.js"></script>
+  <script src="./src/drag.js"></script>
+  <script src="./src/joie.js"></script>
+  <script src="./src/colere.js"></script>
 </html>

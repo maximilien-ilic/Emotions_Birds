@@ -1,11 +1,5 @@
 body {
-    background-image: url("./FOND\ INTRO.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    margin: 0;
-    font-family: 'AngryBirds', sans-serif;
+
 }
 
 
@@ -29,6 +23,7 @@ body {
 }
 
 .title {
+  font-family: 'AngryBirds';
   font-size: 120px;
   margin: 0;
   color: white;
@@ -82,8 +77,9 @@ body {
 }
 
 
-body.zoom-out {
+.zoom-out {
   animation: zoomOut 0.8s forwards;
+  transform-origin: center;
 }
 
 @keyframes zoomOut {
