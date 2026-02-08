@@ -52,7 +52,7 @@ greenBird1.addEventListener("click", () => {
     greenBird1.classList.add('disp');
       greenBird1.classList.remove('transition2');
     window.scrollTo({
-  left: window.scrollX + window.innerWidth,
+  left: window.scrollX + window.innerWidth * 3,
   top: 0,
   behavior: 'smooth'
 });
@@ -162,7 +162,7 @@ redBird2.addEventListener("click", () => {
     redBird2.classList.add('disp');
       redBird2.classList.remove('transition');
     window.scrollTo({
-  left: window.scrollX + window.innerWidth,
+  left: window.scrollX - window.innerWidth * 2,
   top: 0,
   behavior: 'smooth'
 });
@@ -193,4 +193,6 @@ setTimeout(() => {
 
 }
 setInterval(createRaindrop, 50)
+
+
 

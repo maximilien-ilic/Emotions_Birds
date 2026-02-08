@@ -45,3 +45,26 @@ function dropHandler(ev) {
     }, 2000);
 }
 
+
+const green = document.querySelector("#greenBird");
+const red = document.querySelector("#redBird");
+const blue = document.querySelector("#blueBird");
+
+green.addEventListener("mouseenter", () => {
+    triste.pause();
+    colere.pause();
+    principale.pause();
+    joie.play();
+});
+blue.addEventListener("mouseenter", () => {
+        triste.play();
+    colere.pause();
+    principale.pause();
+    joie.pause();
+});
+red.addEventListener("mouseenter", () => {
+    triste.pause();
+    colere.play();
+    principale.pause();
+    joie.pause();
+});
