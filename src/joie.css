@@ -1,0 +1,32 @@
+
+
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #dd6666;
+}
+
+.controls button {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #333;
+  background: rgb(223, 41, 41);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.controls button:hover {
+  background: rgb(171, 26, 26);
+}
+
+#nombre {
+  font-size: 24px;
+  font-weight: bold;
+  min-width: 40px;
+  text-align: center;
+}

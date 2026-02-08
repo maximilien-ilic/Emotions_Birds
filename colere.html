@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/colere.css" />
+    <title>colere</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="Title">
+        <h2 class="choix">Tu choisis qui ?</h2>
+      </div>
+      <div class="flex">
+        <img src="src/image 43.png" id="cochon" alt="cochon vert" />
+        <img src="src/image 44.png" id="oiseau" alt="oiseau rouge" />
+      </div>
+    </div>
+    <div id="modal" class="opacity modal-overlay">
+      <div class="modal">
+        <div class="modal-header">
+          <h1 class="modal-title">ERREUR</h1>
+          <button id="close" class="modal-close">✕</button>
+        </div>
+        <div id="content" class="modal-content">
+          <h2 class="error-title">Erreur système critique</h2>
+          <p class="error-message">
+            Une erreur inattendue s'est produite et Windows a dû interrompre le
+            processus en cours.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./src/colere.js"></script>
+</html>
