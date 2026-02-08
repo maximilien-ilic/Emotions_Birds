@@ -57,10 +57,11 @@ table {
 
 
 body{
+  font-family: 'AngryBirds', sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
-  overflow-x: auto;
+  overflow-x: hidden;
   height: 100svh;
   overflow-y: hidden;
 }
@@ -171,6 +172,7 @@ padding-right: 5%;
 .carre2_part2{
 display: flex;
 width: 100%; 
+justify-content: center;
 }
 .carre2_part3{
 display: flex;
@@ -450,3 +452,10 @@ padding-left: 5%;
 }
 
 
+.texte_pr{
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  margin-left: 50%;
+  transform: translateY(-300px);
+}

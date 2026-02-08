@@ -1,7 +1,8 @@
 
 .carre2{
     background-image: url("./Colere.jpg");
-
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
